@@ -127,7 +127,7 @@ try:
 
     import os
     for f in csv_files:
-        os.remove(f)
+        os.remove(f) # on supprime les csv pour libérer de l'espace dans le répertoire
 
 except Exception as e:
     print(e)
