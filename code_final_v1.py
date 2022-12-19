@@ -6,18 +6,6 @@ import time
 
 debut = time.time() # heure de début d'exécution
 
-
-# on importe le module subprocess pour installer les librairies nécessaires sans passer par le terminal
-import subprocess
-
-def install(library):
-    subprocess.call(['pip', 'install', library])
-
-print('installation de la librairie pandas...')
-install('pandas')
-print('installation de la librairie azure-storage-blob...')
-install('azure-storage-blob')
-
 # on lit le fichier cs.txt pour obtenir la connection string et se connecter au Azure Storage Blob pour récupérer les fichiers
 try:
     with open('cs.txt') as f:
@@ -137,6 +125,10 @@ try:
     print('alimentation de la table Stores...',flush=True)
     df_stores.to_sql("Stores",conn,if_exists='append', index=False)
 
+    import os
+    for f in csv_files:
+        os.remove(f)
+
 except Exception as e:
     print(e)
     
@@ -144,3 +136,4 @@ except Exception as e:
 
 duree = time.time() - debut
 print(f"Temps d'exécution: {duree} secondes")
+
