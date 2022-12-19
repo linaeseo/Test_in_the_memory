@@ -1,1 +1,0 @@
-DefaultEndpointsProtocol=https;AccountName=datatechnicaltest;AccountKey=P63Mt2gbpMyVgtD1qN0fZvRVViohd/PcI40kKEAAa+KwS7ubewg/o0Nar5kCvKBunHyqEK0KMGuS+AStKwo5iA==;EndpointSuffix=core.windows.net
