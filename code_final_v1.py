@@ -32,7 +32,7 @@ try:
                     print('création du fichier : ' + blob.name)
                     file.write(data)
 
-        # on importe la librairie sqlite3 qui va nous servir à interroger le système de gestion de base de données
+    # on importe la librairie sqlite3 qui va nous servir à interroger le système de gestion de base de données
     import sqlite3
         
     print('création/connexion à la base de données...')
